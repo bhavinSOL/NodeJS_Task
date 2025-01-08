@@ -5,11 +5,10 @@ switch(task){
         listTodo()
         break
     case 'add':
-        addtoDo(task)
+        addtoDo()
         break
     case 'remove' || 'delete':
         deletetodo()
-      
         break
     default:
         console.log('Invalid task')
@@ -40,8 +39,6 @@ function listTodo(){
         console.error("Error :", error.message);
       }
 }
-
-
 function deletetodo() {
   try {
     const taskNumber = parseInt(process.argv.slice(3).join(" "));
@@ -56,5 +53,3 @@ function deletetodo() {
     console.error("Error:", error.message);
   }
 }
-
-
